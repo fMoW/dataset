@@ -2,6 +2,8 @@
 
 There are two versions of the dataset: **fMoW-full** and **fMoW-rgb**. fMoW-full is in TIFF format, contains 4-band and 8-band multispectral imagery, and is quite large at ~3.5TB in size. fMoW-rgb is in JPEG format, all multispectral imagery has been converted to RGB, and it is significantly smaller in size at ~200GB.
 
+Please see the [fMoW flyer](https://github.com/fMoW/dataset/raw/master/IARPA-fMoW.pdf) for more info about the challenge.
+
 ## Categories
 
 ```
@@ -21,25 +23,25 @@ The fMoW datasets are available on AWS in [Requester Pays](http://docs.aws.amazo
 
 Accessing the data through AWS is possible using tools such as the [AWS CLI](https://aws.amazon.com/documentation/cli/). For example, to get a directory listing using the AWS CLI run the following commands:
 ```
-	aws s3 ls s3://fmow-rgb --request-payer requester
-	aws s3 ls s3://fmow-full --request-payer requester
+aws s3 ls s3://fmow-rgb --request-payer requester
+aws s3 ls s3://fmow-full --request-payer requester
 ```
 To download the manifest.json.bz2 files that list all images and metadata present in each bucket run the following commands:
 ```
-	aws s3api get-object --bucket fmow-rgb --key manifest.json.bz2 --request-payer requester
-	aws s3api get-object --bucket fmow-full --key manifest.json.bz2 --request-payer requester
+aws s3api get-object --bucket fmow-rgb --key manifest.json.bz2 --request-payer requester
+aws s3api get-object --bucket fmow-full --key manifest.json.bz2 --request-payer requester
 ```
 
 ### BitTorrent
 
 Using the client of your choice, you can add the following torrent files to download the corresponding subsets of the fMoW dataset:
 
-  * [fMoW-full train and val](https://github.com/fMoW/dataset/raw/fMoW-full_trainval_v1.0.0.torrent)
-  * [fMoW-full test](https://github.com/fMoW/dataset/raw/fMoW-full_test_v1.0.0.torrent)
-  * [fMoW-full val sample with false detections](https://github.com/fMoW/dataset/raw/fMoW-full_val_sample_v1.1.0.torrent)
-  * [fMoW-rgb train and val](https://github.com/fMoW/dataset/raw/fMoW-rgb_trainval_v1.0.0.torrent)
-  * [fMoW-rgb test](https://github.com/fMoW/dataset/raw/fMoW-rgb_test_v1.0.0.torrent)
-  * [fMoW-rgb val sample with false detections](https://github.com/fMoW/dataset/raw/fMoW-rgb_val_sample_v1.1.0.torrent)
+  * [fMoW-full train and val](https://github.com/fMoW/dataset/raw/master/fMoW-full_trainval_v1.0.0.torrent)
+  * [fMoW-full test](https://github.com/fMoW/dataset/raw/master/fMoW-full_test_v1.0.0.torrent)
+  * [fMoW-full val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-full_val_sample_v1.1.0.torrent)
+  * [fMoW-rgb train and val](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_trainval_v1.0.0.torrent)
+  * [fMoW-rgb test](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_test_v1.0.0.torrent)
+  * [fMoW-rgb val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_val_sample_v1.1.0.torrent)
   
 ## License
 
