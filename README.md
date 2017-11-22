@@ -4,6 +4,19 @@ There are two versions of the dataset: **fMoW-full** and **fMoW-rgb**. fMoW-full
 
 Please see the [fMoW flyer](https://github.com/fMoW/dataset/raw/master/IARPA-fMoW.pdf) for more info about the challenge.
 
+## References
+
+If you use our dataset or code, please cite [our paper](https://arxiv.org/abs/1711.07846):
+
+```
+@article{fmow2017,
+  title={Functional Map of the World},
+  author={Christie, Gordon and Fendley, Neil and Wilson, James and Mukherjee, Ryan},
+  journal={arXiv preprint arXiv:1711.07846},
+  year={2017}
+}
+```
+
 ## Categories
 
 ```
