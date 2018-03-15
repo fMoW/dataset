@@ -2,7 +2,8 @@
 
 There are two versions of the dataset: **fMoW-full** and **fMoW-rgb**. fMoW-full is in TIFF format, contains 4-band and 8-band multispectral imagery, and is quite large at ~3.5TB in size. fMoW-rgb is in JPEG format, all multispectral imagery has been converted to RGB, and it is significantly smaller in size at ~200GB.
 
-Please see the [fMoW flyer](https://github.com/fMoW/dataset/raw/master/IARPA-fMoW.pdf) for more info about the challenge. <span style="color:red">Note that the fMoW challenge has now ended.</span>
+Please see the [fMoW flyer](https://github.com/fMoW/dataset/raw/master/IARPA-fMoW.pdf) for more info about the challenge.
+**Note that the fMoW challenge has now ended.**
 
 ## References
 
