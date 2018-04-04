@@ -69,11 +69,11 @@ Using the client of your choice, you can add the following torrent files to down
   * [fMoW-full train and val](https://github.com/fMoW/dataset/raw/master/fMoW-full_trainval_v1.0.0.torrent)
   * [fMoW-full test](https://github.com/fMoW/dataset/raw/master/fMoW-full_test_v1.0.0.torrent)
   * [fMoW-full val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-full_val_sample_v1.1.0.torrent)
-  * [fMoW-full sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-full_seqandgt_v1.2.0.torrent)
+  * [fMoW-full sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-full_seqandgt_v1.2.1.torrent)
   * [fMoW-rgb train and val](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_trainval_v1.0.0.torrent)
   * [fMoW-rgb test](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_test_v1.0.0.torrent)
   * [fMoW-rgb val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_val_sample_v1.1.0.torrent)
-  * [fMoW-rgb sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_seqandgt_v1.2.0.torrent)
+  * [fMoW-rgb sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_seqandgt_v1.2.1.torrent)
 
 ## Additional details
 
