@@ -30,33 +30,18 @@ There are two official ways to download the dataset: from AWS or using BitTorren
 
 ### AWS
 
-The fMoW datasets are available on AWS in [Requester Pays](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) buckets at:
-
-  * **fMoW-full**: s3://fmow-full
-  * **fMoW-rgb**: s3://fmow-rgb
-
-Or without requester pays at:
+The fMoW datasets are available on AWS for free at:
 
   * **fMoW-full**: s3://spacenet-dataset/fmow/fmow-full
   * **fMoW-rgb**: s3://spacenet-dataset/fmow/fmow-rgb
  
 Accessing the data through AWS is possible using tools such as the [AWS CLI](https://aws.amazon.com/documentation/cli/). For example, to get a directory listing using the AWS CLI run the following commands:
 ```
-aws s3 ls s3://fmow-full --request-payer requester
-aws s3 ls s3://fmow-rgb --request-payer requester
-```
-or without requester pays:
-```
 aws s3 ls s3://spacenet-dataset/fmow/fmow-full/
 aws s3 ls s3://spacenet-dataset/fmow/fmow-rgb/
 ```
 
 To download the manifest.json.bz2 files that list all images and metadata present in each bucket, run the following commands:
-```
-aws s3api get-object --bucket fmow-full --key manifest.json.bz2 --request-payer requester
-aws s3api get-object --bucket fmow-rgb --key manifest.json.bz2 --request-payer requester
-```
-or without requester pays:
 ```
 aws s3 cp s3://spacenet-dataset/fmow/fmow-full/manifest.json.bz2 ./
 aws s3 cp s3://spacenet-dataset/fmow/fmow-rgb/manifest.json.bz2 ./
