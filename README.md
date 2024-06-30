@@ -1,11 +1,21 @@
 # Functional Map of the World (fMoW) Dataset
 
+- [Reference](#reference)
+- [Categories](#categories)
+- [Download](#download)
+  - [AWS](#aws)
+  - [BitTorrent (Deprecated)](#bittorrent-deprecated)
+- [Additional details](#additional-details)
+  - [Bounding box format](#bounding-box-format)
+  - [Non-existent country codes](#non-existent-country-codes)
+- [License](#license)
+
 There are two versions of the dataset: **fMoW-full** and **fMoW-rgb**. fMoW-full is in TIFF format, contains 4-band and 8-band multispectral imagery, and is quite large at ~3.5TB in size. fMoW-rgb is in JPEG format, all multispectral imagery has been converted to RGB, and it is significantly smaller in size at ~200GB.
 
 Please see the [fMoW flyer](https://github.com/fMoW/dataset/raw/master/IARPA-fMoW.pdf) for more info about the challenge.
 **Note that the fMoW challenge has now ended.**
 
-## References
+## Reference
 
 If you use our dataset or code, please cite [our paper](https://arxiv.org/abs/1711.07846):
 
@@ -26,46 +36,57 @@ If you use our dataset or code, please cite [our paper](https://arxiv.org/abs/17
 
 ## Download
 
-There are two official ways to download the dataset: from AWS or using BitTorrent.
+Originally, there were two official ways to download the dataset: from AWS or using BitTorrent. However, the BitTorrent method is no longer actively maintained, leaving AWS as the primary recommended method for downloading the data.
 
 ### AWS
 
 The fMoW datasets are available on AWS for free at:
 
-  * **fMoW-full**: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full
-  * **fMoW-rgb**: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb
- 
+- **fMoW-full**: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full
+- **fMoW-rgb**: s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb
+
 Accessing the data through AWS is possible using tools such as the [AWS CLI](https://aws.amazon.com/documentation/cli/). For example, to get a directory listing using the AWS CLI run the following commands:
+
 ```
 aws s3 ls s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/
 aws s3 ls s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/
 ```
 
 To download the manifest.json.bz2 files that list all images and metadata present in each bucket, run the following commands:
+
 ```
 aws s3 cp s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-full/manifest.json.bz2 ./
 aws s3 cp s3://spacenet-dataset/Hosted-Datasets/fmow/fmow-rgb/manifest.json.bz2 ./
 ```
 
-### BitTorrent
+### BitTorrent (Deprecated)
 
+**NOTE: This download method is no longer maintained!**
 Using the client of your choice, you can add the following torrent files to download the corresponding subsets of the fMoW dataset:
 
-  * [fMoW-full train and val](https://github.com/fMoW/dataset/raw/master/fMoW-full_trainval_v1.0.0.torrent)
-  * [fMoW-full test](https://github.com/fMoW/dataset/raw/master/fMoW-full_test_v1.0.0.torrent)
-  * [fMoW-full val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-full_val_sample_v1.1.0.torrent)
-  * [fMoW-full sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-full_seqandgt_v1.2.1.torrent)
-  * [fMoW-rgb train and val](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_trainval_v1.0.0.torrent)
-  * [fMoW-rgb test](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_test_v1.0.0.torrent)
-  * [fMoW-rgb val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_val_sample_v1.1.0.torrent)
-  * [fMoW-rgb sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_seqandgt_v1.2.1.torrent)
+- ~~[fMoW-full train and val](https://github.com/fMoW/dataset/raw/master/fMoW-full_trainval_v1.0.0.torrent)~~
+- ~~[fMoW-full test](https://github.com/fMoW/dataset/raw/master/fMoW-full_test_v1.0.0.torrent)~~
+- ~~[fMoW-full val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-full_val_sample_v1.1.0.torrent)~~
+- ~~[fMoW-full sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-full_seqandgt_v1.2.1.torrent)~~
+- ~~[fMoW-rgb train and val](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_trainval_v1.0.0.torrent)~~
+- ~~[fMoW-rgb test](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_test_v1.0.0.torrent)~~
+- ~~[fMoW-rgb val sample with false detections](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_val_sample_v1.1.0.torrent)~~
+- ~~[fMoW-rgb sequestered and ground truth data](https://github.com/fMoW/dataset/raw/master/fMoW-rgb_seqandgt_v1.2.1.torrent)~~
 
 ## Additional details
 
-The train and val sets were released to competitors with category labels and a rich set of metadata fields. The test and seq sets had category labels removed and a small amount of noise added to many metadata fields. Certain fields, such as GPS coordinates, were removed from all sets during the challenge. However, now that the challenge has ended, the sequestered and ground truth data has been released, which contains all raw metadata, including category labels and GPS coordinates, for every image. 
+The train and val sets were released to competitors with category labels and a rich set of metadata fields. The test and seq sets had category labels removed and a small amount of noise added to many metadata fields. Certain fields, such as GPS coordinates, were removed from all sets during the challenge. However, now that the challenge has ended, the sequestered and ground truth data has been released, which contains all raw metadata, including category labels and GPS coordinates, for every image.
 
 Joining these ground truth metadata files with the original test and seq imagery does require a small amount of effort. In each of the ground truth archives for fMoW-full and fMoW-rgb there is a mapping JSON file. This mapping file provides the association between each test and seq image and its corresponding metadata. You can also use this mapping file to reorganize the test and seq data into category and temporal sequence folders similar to the train and val sets.
-  
+
+### Bounding box format
+
+Bounding boxes are provided in the format `[x, y, width, height]` where the point `(x, y)` corresponds to the top-left edge of the box surrounding the object of interest. In other words, these four values can also be thought of as corresponding to `[left, top, width, height]` for a box surrounding the object of interest.
+
+### Non-existent country codes
+
+Some country codes in the dataset may not be valid. Please consider re-computing country codes using the underlying geographic coordinate metadata. See [this issue](https://github.com/fMoW/dataset/issues/13) for more details.
+
 ## License
 
 This data is licensed under the [Functional Map of the World Challenge Public License](https://github.com/fMoW/dataset/raw/master/LICENSE). This new license is similar to the previous license with modifications to clarify that algorithms trained on challenge data are not considered adapted material.
